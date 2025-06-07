@@ -95,22 +95,6 @@ const PROJECTTAGS = {
     class: "bg-[#a6432c6e] text-white",
     icon: Rollup,
   },
-
-  SOLIDITY: {
-    name: "Solidity",
-  },
-  ETHEREUM: {
-    name: "Ethereum",
-  },
-  METAMASK: {
-    name: "MetaMask",
-  },
-  WEB3JS: {
-    name: "Web3.js",
-  },
-  THIRDWEB: {
-    name: "Thirdweb",
-  },
 };
 
 const SKILLS = {
@@ -126,10 +110,6 @@ const SKILLS = {
     name: "JavaScript",
     icon: Javascript,
   },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    icon: Typescript,
-  },
   CPP: {
     name: "C++",
     icon: CPP,
@@ -137,11 +117,6 @@ const SKILLS = {
   SQL: {
     name: "SQL",
     icon: SQL,
-  },
-
-  OCI: {
-    name: "Oracle Cloud",
-    icon: OCI,
   },
   REACT: {
     name: "React",
@@ -205,10 +180,7 @@ const SKILLS = {
     name: "Docker",
     icon: Docker,
   },
-  APEX: {
-    name: "APEX",
-    icon: Oracle,
-  },
+
   GITHUB: {
     name: "GitHub",
     icon: GitHubColor,
@@ -217,10 +189,7 @@ const SKILLS = {
     name: "GitLab",
     icon: GitLab,
   },
-  ROLLUP: {
-    name: "Rollup",
-    icon: Rollup,
-  },
+
   VERCEL: {
     name: "Vercel",
     icon: Vercel,
@@ -233,19 +202,6 @@ const SKILLS = {
     name: "VSCode",
     icon: VSCode,
   },
-
-  SOLIDITY: {
-    name: "Solidity",
-    icon: Solidity,
-  },
-  SOLANA: {
-    name: "Solana",
-    icon: Solana,
-  },
-  BLOCKCHAIN: {
-    name: "Blockchain",
-    icon: Blockchain,
-  },
   DEVOPS: {
     name: "DevOps",
     icon: Devops,
@@ -257,6 +213,10 @@ const SKILLS = {
   WEBRTC: {
     name: "WebRTC",
     icon: WebRTC,
+  },
+  REACTNATIVE: {
+    name: "React Native",
+    icon: ReactJS,
   },
 };
 
@@ -290,143 +250,91 @@ const NAVITEMS = [
 
 const EXPERIENCE = [
   {
-    date: "January 2025 - Present",
-    title: "Project Intern",
-    company: "Oracle",
+    date: "June 2025 - Present",
+    title: "Co-founder & SDE",
+    company: "Gigzi",
+    type: "",
+    description: [
+      "Currently architecting and developing a full-stack artist booking mobile platform using React Native for cross-platform performance, with REST APIs powered by Node.js/Express and a scalable MongoDB backend.",
+      "Designing and implementing secure artist dashboards: profile editor, event calendar, and wallet with post-event payouts using event-driven transaction triggers.",
+      "Building a comprehensive admin panel for onboarding/verification, payment management, and dynamic category control with role-based access.",
+      "Leading a 4-member agile team focused on product planning, sprint execution, API optimization, and cloud deployment on Vercel and Netlify.",
+    ],
+  },
+  {
+    date: "January 2024 - July 2025",
+    title: "Software Developer Intern",
+    company: "MediSage",
     type: "Internship",
     description: [
-      "Working in a team that provides cloud infrastructure for internal Oracle projects, focusing on Oracle Cloud Infrastructure (OCI) and Oracle APEX.",
-      "Automating cloud infrastructure processes, using Python and Shell Scripting to improve efficiency and scalability.",
-    ],
-  },
-  {
-    date: "January 2023 - December 2023",
-    title: "Software Development Intern",
-    company: "Drona Pay",
-    type: "Part-time",
-    description: [
-      "Refactored and optimized a React codebase, reducing load times by 30%.",
-      "Implemented best practices to improve code quality, reducing maintenance effort by 20%.",
-      "Contributed to the development of Finos Perspective Dashboards, leveraging React to deliver data-driven visualizations.",
-      "Resolved 100+ bugs and issues, maintaining dashboard stability.",
-    ],
-  },
-  {
-    date: "June 2023 - December 2023",
-    title: "Maintainer",
-    company: "TCET Open Source",
-    type: "Part-time",
-    description: [
-      "Revamped the college website, resulting in significant improvement in user engagement and accessibility for a diverse user base of 4000 students.",
-      "Enhanced UX with an intuitive design, reducing navigation time by 30%.",
-      "Leveraged React and Tailwind CSS to contribute to the Resume Screener Project.",
-    ],
-  },
-  {
-    date: "February 2022 - July 2022",
-    title: "React Development Intern",
-    company: "Drona Pay",
-    type: "Internship",
-    description: [
-      "Collaborated with design and product teams to align user interface with design guidelines, resulting in a 20% increase in user satisfaction.",
-      "Developed and implemented behavioral fingerprints and keystroke dynamics, enhancing security by 15%.",
-      "Created a comprehensive Postman automation suite, reducing testing time by 30% and enhancing efficiency in API functionality validation during development cycles.",
+      "Reduced 60% of manual effort by implementing automation scripts for Database Entries.",
+      "Developed and implemented an API for administration dashboards, streamlining backend processes and enhancing system efficiency",
+      "Converted UI designs into functional React Js and Next.js code, resulting in responsive and high-performance user interfaces",
     ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "FundForTrust",
-    subtitle: "Where Trust and Funding Meet",
+    title: "Inaya",
+    subtitle: "Fashion Commerce Platform",
     description:
-      "FundForTrust, currently in development, is a blockchain-based crowdfunding platform designed to provide a safe, secure, and transparent way for creators and donors to engage in fundraising. By leveraging blockchain technology, it ensures donor guarantee, prevents data tampering, and enhances trust between creators and contributors. This platform aims to revolutionize crowdfunding by offering decentralized and immutable transaction records.",
-    detail:
-      "https://drive.google.com/file/d/1e8T6awd7yYmZnF4yR3y2y_l2oRKlJubJ/view?usp=sharing",
-    github: "https://github.com/yashodharpatel/fundfortrust",
-    link: "",
-    image: "/projects/fundfortrust.webp",
+      "Developed a fully responsive e-commerce platform featuring user authentication, shopping cart, and real-time IP-based delivery charges.\n\n" +
+      "Built an admin panel managing 15+ modules including shipping configurations, coupon systems, and user operations.\n\n" +
+      "Implemented an analytics dashboard tracking 20+ key metrics, improving order processing efficiency by 40%.\n\n" +
+      "Delivered the project as a freelancer, handling full-stack development and client communication independently.",
+    detail: "",
+    github: "",
+    link: "https://inayapoeticthreads.com/",
+    image: "/projects/inaya.png",
     tags: [
-      PROJECTTAGS.SOLIDITY,
-      PROJECTTAGS.ETHEREUM,
-      PROJECTTAGS.METAMASK,
-      PROJECTTAGS.WEB3JS,
-      PROJECTTAGS.THIRDWEB,
       PROJECTTAGS.REACT,
-      PROJECTTAGS.TAILWIND,
-    ],
-  },
-  {
-    title: "Authease",
-    subtitle: "Simplifying Authentication, Amplifying Development",
-    description:
-      "Authease, currently in development, is an open-source Node.js library that simplifies user authentication for frontend applications. It offers modular components, centralized configuration, and seamless integration with various frameworks, allowing developers to implement secure authentication features without extensive backend setup.",
-    detail:
-      "https://docs.google.com/document/d/18-8rOahuLzFEiHm6i_c9V5fHqA4sYOuEFaQlb3JAqyY/edit?usp=sharing",
-    github: "https://github.com/yashodharpatel/authease",
-    link: "",
-    image: "/projects/authease.webp",
-    tags: [
       PROJECTTAGS.NODE,
-      PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.TYPESCRIPT,
-      PROJECTTAGS.NEXT,
-      PROJECTTAGS.TAILWIND,
       PROJECTTAGS.MONGODB,
-      PROJECTTAGS.REDIS,
-      PROJECTTAGS.ROLLUP,
+      PROJECTTAGS.EXPRESS,
+      PROJECTTAGS.TAILWIND,
+      // Since Inaya is fashion commerce, these blockchain tags might not fit unless the project uses them
+      // Remove Solidity, Ethereum, MetaMask, Web3.js, Thirdweb if irrelevant
     ],
   },
   {
-    title: "Lingoleap",
-    subtitle: "Elevate Your Language Journey",
+    title: "FeedBacker",
+    subtitle: "Course Feedback System",
     description:
-      "Lingoleap is a web application offering interactive Hindi language therapy materials and learning exercises. It features structured Hindi content across beginner to advanced levels, gamified progression through XP and streaks, and supervisor oversight, providing an engaging platform for Hindi language therapy and learning.",
-    detail:
-      "https://docs.google.com/document/d/1K-LTq3XryjIPmVbhVND0o27JOETyU58s100DRQWR0LU/edit?usp=sharing",
-    github: "https://github.com/yashodharpatel/Lingoleap",
-    link: "https://drive.google.com/file/d/1IEzgALx_RX4I8iExSmb_al4i04t62JBP/view?usp=sharing",
-    image: "/projects/lingoleap.webp",
+      "Developed a scalable feedback management system enabling students to securely submit course and experience feedback, ensuring data integrity and anonymity.\n\n" +
+      "Engineered a dynamic analytics dashboard for Heads of Departments (HoDs) and Principal using React and MongoDB aggregation pipelines to provide real-time statistical insights and trend analysis.\n\n" +
+      "Implemented role-based access control (RBAC) and optimized API endpoints with Express.js for efficient, secure data retrieval and administration.\n\n" +
+      "Applied responsive UI design with Tailwind CSS to ensure seamless user experience across devices.",
+    detail: "",
+    github: "https://github.com/stars/yashaghane21/lists/feedbacker",
+    link: "https://gpmfeedback.netlify.app/",
+    image: "/projects/feedbacker.png",
     tags: [
       PROJECTTAGS.NODE,
       PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.NEXT,
+      PROJECTTAGS.REACT,
       PROJECTTAGS.TAILWIND,
       PROJECTTAGS.MONGODB,
     ],
   },
   {
-    title: "Codingpeer",
-    subtitle: "Connecting Coders, Inspiring Innovation",
+    title: "PolyConnectHub",
+    subtitle: "Polytechnic Project Collaboration Platform",
     description:
-      "Codingpeer is a web application designed to connect developers and tech enthusiasts globally. Built with React.js and Firebase, it facilitates project collaboration, partner searching, and networking opportunities. Future plans include real-time chat, video conversations, and group creation features.",
-    detail:
-      "https://docs.google.com/document/d/1zLnrslIAHrNhGUnz19i4geDIjRlwXXubk9R3CR4d7cU/edit?usp=sharing",
-    github: "https://github.com/yashodharpatel/Codingpeer",
-    link: "https://drive.google.com/file/d/1BxbLVTyq1De3nDqRJfWUqYiG6qCMNjgo/view",
-    image: "/projects/codingpeer.webp",
+      "Developed a Super Admin Portal to streamline management and coordination across multiple polytechnic colleges, enabling centralized control and oversight.\n\n" +
+      "Implemented individual college accounts for Heads of Departments (HoDs) to showcase, manage, and update project information efficiently.\n\n" +
+      "Built a responsive, user-friendly student interface to access a comprehensive repository of projects, fostering collaboration, innovation, and reducing redundancy.\n\n" +
+      "Leveraged React and Tailwind CSS for seamless UI/UX, Node.js and Express for scalable backend APIs, and MongoDB for robust data storage.",
+    detail: "",
+    github: "https://github.com/stars/yashaghane21/lists/polyconnecthub",
+    link: "https://polyconnecthub.netlify.app/login",
+    image: "/projects/polyconnecthub.png",
     tags: [
+      PROJECTTAGS.NODE,
+      PROJECTTAGS.EXPRESS,
       PROJECTTAGS.REACT,
-      PROJECTTAGS.FIREBASE,
-      PROJECTTAGS.BOOTSTRAP,
-      PROJECTTAGS.SASS,
-    ],
-  },
-  {
-    title: "Medishare",
-    subtitle: "Bridging the Gap in Healthcare",
-    description:
-      "Medishare is a community pharmacy application that collects and distributes unused medicines to the needy. It features a medicine bank, volunteer management, and consumer protection measures, aiming to reduce drug wastage and improve medication access for underprivileged communities.",
-    detail:
-      "https://docs.google.com/document/d/1Rx2ty7P9X-XrZ9wUuoP-pXHtnz57gqR8usIACd9EBYI/edit?usp=sharing",
-    github: "https://github.com/yashodharpatel/medishare",
-    link: "https://drive.google.com/file/d/1f-ef8UZrMwNMJEJIwnEJkV-QjPXkLrBu/view?usp=sharing",
-    image: "/projects/medishare.webp",
-    tags: [
-      PROJECTTAGS.REACT,
-      PROJECTTAGS.FIREBASE,
-      PROJECTTAGS.BOOTSTRAP,
-      PROJECTTAGS.SASS,
+      PROJECTTAGS.TAILWIND,
+      PROJECTTAGS.MONGODB,
     ],
   },
 ];
@@ -438,7 +346,6 @@ const SKILLSET = [
       SKILLS.JAVA,
       SKILLS.PYTHON,
       SKILLS.JAVASCRIPT,
-      SKILLS.TYPESCRIPT,
       SKILLS.CPP,
       SKILLS.SQL,
     ],
@@ -446,7 +353,6 @@ const SKILLSET = [
   {
     name: "Technical",
     skills: [
-      SKILLS.OCI,
       SKILLS.REACT,
       SKILLS.NEXT,
       SKILLS.NODE,
@@ -454,6 +360,7 @@ const SKILLSET = [
       SKILLS.SHELL,
       SKILLS.MONGODB,
       SKILLS.REDIS,
+      SKILLS.REACTNATIVE,
       SKILLS.FIREBASE,
       SKILLS.ASTRO,
       SKILLS.TAILWIND,
@@ -466,27 +373,25 @@ const SKILLSET = [
     skills: [
       SKILLS.POSTMAN,
       SKILLS.DOCKER,
-      SKILLS.APEX,
       SKILLS.GIT,
       SKILLS.GITHUB,
       SKILLS.GITLAB,
-      SKILLS.ROLLUP,
       SKILLS.VERCEL,
       SKILLS.MACOS,
       // SKILLS.VSCODE,
     ],
   },
-  {
-    name: "Currently Learning",
-    skills: [
-      SKILLS.SOLIDITY,
-      SKILLS.BLOCKCHAIN,
-      SKILLS.SOLANA,
-      SKILLS.DEVOPS,
-      SKILLS.KUBERNETES,
-      // SKILLS.WEBRTC,
-    ],
-  },
+  // {
+  //   name: "Currently Learning",
+  //   skills: [
+  //     SKILLS.SOLIDITY,
+  //     SKILLS.BLOCKCHAIN,
+  //     SKILLS.SOLANA,
+  //     SKILLS.DEVOPS,
+  //     SKILLS.KUBERNETES,
+  //     // SKILLS.WEBRTC,
+  //   ],
+  // },
 ];
 
 export { NAVITEMS, EXPERIENCE, PROJECTS, SKILLSET };
