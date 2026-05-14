@@ -251,14 +251,14 @@ const NAVITEMS = [
 const EXPERIENCE = [
   {
     date: "June 2025 - Present",
-    title: "Co-founder & SDE",
+    title: " SDE",
     company: "Gigzi",
     type: "",
     description: [
-      "Currently architecting and developing a full-stack artist booking mobile platform using React Native for cross-platform performance, with REST APIs powered by Node.js/Express and a scalable MongoDB backend.",
-      "Designing and implementing secure artist dashboards: profile editor, event calendar, and wallet with post-event payouts using event-driven transaction triggers.",
-      "Building a comprehensive admin panel for onboarding/verification, payment management, and dynamic category control with role-based access.",
-      "Leading a 4-member agile team focused on product planning, sprint execution, API optimization, and cloud deployment on Vercel and Netlify.",
+      "Designed and developed a cross-platform artist booking platform with scalable architecture for multi-city deployment",
+      "Implemented secure login, artist onboarding, booking workflows, and role-based admin panels with Secure payouts.",
+      "Leading a 4-member team; managing Git workflows, API design, and agile delivery for scalable MVP release.",
+      "Coordinating backend deployment on Vercel and application release on the Google Play Store.",
     ],
   },
   {
@@ -297,7 +297,27 @@ const PROJECTS = [
       // Remove Solidity, Ethereum, MetaMask, Web3.js, Thirdweb if irrelevant
     ],
   },
+
   {
+    title: "PolyConnectHub",
+    subtitle: "Polytechnic Project Collaboration Platform",
+    description:
+      "Developed a Super Admin Portal to streamline management and coordination across multiple polytechnic colleges, enabling centralized control and oversight.\n\n" +
+      "Implemented individual college accounts for Heads of Departments (HoDs) to showcase, manage, and update project information efficiently.\n\n" +
+      "Built a responsive, user-friendly student interface to access a comprehensive repository of projects, fostering collaboration, innovation, and reducing redundancy.\n\n" +
+      "Leveraged React and Tailwind CSS for seamless UI/UX, Node.js and Express for scalable backend APIs, and MongoDB for robust data storage.",
+    detail: "",
+    github: "https://github.com/yashaghane21/PolyConnectHub",
+    link: "https://polyconnect-hub.netlify.app/",
+    image: "/projects/ss.png",
+    tags: [
+      PROJECTTAGS.NODE,
+      PROJECTTAGS.EXPRESS,
+      PROJECTTAGS.REACT,
+      PROJECTTAGS.TAILWIND,
+      PROJECTTAGS.MONGODB,
+    ],
+  },  {
     title: "FeedBacker",
     subtitle: "Course Feedback System",
     description:
@@ -309,26 +329,6 @@ const PROJECTS = [
     github: "https://github.com/stars/yashaghane21/lists/feedbacker",
     link: "https://gpmfeedback.netlify.app/",
     image: "/projects/feedbacker.png",
-    tags: [
-      PROJECTTAGS.NODE,
-      PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.REACT,
-      PROJECTTAGS.TAILWIND,
-      PROJECTTAGS.MONGODB,
-    ],
-  },
-  {
-    title: "PolyConnectHub",
-    subtitle: "Polytechnic Project Collaboration Platform",
-    description:
-      "Developed a Super Admin Portal to streamline management and coordination across multiple polytechnic colleges, enabling centralized control and oversight.\n\n" +
-      "Implemented individual college accounts for Heads of Departments (HoDs) to showcase, manage, and update project information efficiently.\n\n" +
-      "Built a responsive, user-friendly student interface to access a comprehensive repository of projects, fostering collaboration, innovation, and reducing redundancy.\n\n" +
-      "Leveraged React and Tailwind CSS for seamless UI/UX, Node.js and Express for scalable backend APIs, and MongoDB for robust data storage.",
-    detail: "",
-    github: "https://github.com/stars/yashaghane21/lists/polyconnecthub",
-    link: "https://polyconnecthub.netlify.app/login",
-    image: "/projects/polyconnecthub.png",
     tags: [
       PROJECTTAGS.NODE,
       PROJECTTAGS.EXPRESS,
