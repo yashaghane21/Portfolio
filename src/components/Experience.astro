@@ -3,10 +3,10 @@ import ExperienceItem from "./ExperienceItem.astro";
 import { EXPERIENCE } from "./DATA";
 ---
 
-<ol class="relative mt-16">
+<ol class="relative">
   {
     EXPERIENCE.map((experience) => (
-      <li class="">
+      <li>
         <ExperienceItem {...experience} />
       </li>
     ))

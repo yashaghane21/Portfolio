@@ -1,0 +1,45 @@
+---
+import SocialPill from "@/components/util/SocialPill.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import LinkedInIcon from "@/components/icons/socials/LinkedIn.astro";
+import { PROFILE, SOCIALS } from "./DATA";
+---
+
+<div
+  class="relative p-[1px] overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500/70 via-fuchsia-500/30 to-transparent"
+>
+  <div
+    class="relative px-6 py-12 overflow-hidden text-center bg-white sm:px-12 rounded-3xl dark:bg-black"
+  >
+    <div
+      class="absolute -translate-x-1/2 rounded-full -top-24 left-1/2 h-48 w-[28rem] max-w-full bg-pink-500/25 blur-3xl"
+    >
+    </div>
+    <p
+      class="relative font-mono text-sm tracking-widest text-pink-600 dark:text-pink-400"
+    >
+      WHAT'S NEXT?
+    </p>
+    <h2
+      class="relative mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white"
+    >
+      Let’s build something <span class="text-gradient">great</span>.
+    </h2>
+    <p
+      class="relative max-w-xl mx-auto mt-4 text-gray-600 text-pretty dark:text-gray-400"
+    >
+      I’m open to software engineering roles and interesting collaborations. My
+      inbox is always open, so drop a message and I’ll get back to you.
+    </p>
+    <div class="relative flex flex-wrap justify-center gap-3 mt-8">
+      <SocialPill href={`mailto:${PROFILE.email}`} variant="primary">
+        <MailIcon />
+        Say hello
+      </SocialPill>
+      <SocialPill href={SOCIALS.linkedin}>
+        <LinkedInIcon />
+        Connect on LinkedIn
+      </SocialPill>
+    </div>
+  </div>
+</div>

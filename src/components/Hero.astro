@@ -1,50 +1,89 @@
 ---
-const personalImageAlt = "Yashodhar Patel";
 import Badge from "@/components/util/Badge.astro";
-import ConnectIcon from "@/components/icons/Connect.astro";
 import ResumeIcon from "@/components/icons/Resume.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import GitHubIcon from "@/components/icons/tools/GitHub.astro";
+import LinkedInIcon from "@/components/icons/socials/LinkedIn.astro";
 import SocialPill from "@/components/util/SocialPill.astro";
-
-const resume = "/Yashodhar_Patel_Resume.pdf";
+import { PROFILE, SOCIALS, STATS } from "./DATA";
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/yash.jpg"
-      alt={personalImageAlt}
-    />
+<div class="max-w-3xl">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="relative">
+      <div
+        class="absolute rounded-full -inset-1 bg-gradient-to-tr from-pink-500 via-fuchsia-500 to-rose-400 blur-md opacity-60"
+      >
+      </div>
+      <img
+        class="relative rounded-full size-16 ring-2 ring-pink-500"
+        src="/yash.jpg"
+        alt={PROFILE.name}
+        width="64"
+        height="64"
+      />
+    </div>
     <a
-      href="https://www.linkedin.com/in/yash-aghane-052382215/"
+      href={SOCIALS.linkedin}
       target="_blank"
       rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+      class="transition md:hover:scale-105"
     >
-      <Badge>Available for work</Badge>
+      <Badge>Open to SDE roles</Badge>
     </a>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hey, I’m Yash
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-     Building <strong> Gigzi</strong> and <strong
-      >Third Year Computer Engineering Student</strong
-    > from Mumbai, India 🇮🇳. Passionate about crafting efficient, innovative web
-    solutions.
+
+  <p class="font-mono text-sm tracking-widest text-pink-600 dark:text-pink-400">
+    HEY, I’M
   </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="https://www.linkedin.com/in/yash-aghane-052382215/">
-      <ConnectIcon class="size-4" />
-      Get In Touch
-    </SocialPill>
-    <SocialPill href={"https://drive.google.com/file/d/1hgO1bX7ldccT8w8WhVY1cVhQwT4dAWp-/view?usp=drive_link"}>
-      <ResumeIcon class="size-4" />
+  <h1
+    class="mt-2 text-5xl font-extrabold tracking-tight sm:text-7xl text-gradient pb-1"
+  >
+    {PROFILE.name}
+  </h1>
+  <p class="mt-4 text-lg font-medium text-gray-800 sm:text-xl dark:text-white">
+    {PROFILE.role}
+  </p>
+  <p
+    class="max-w-2xl mt-5 text-lg text-pretty text-gray-600 dark:text-gray-400 [&>strong]:font-semibold [&>strong]:text-gray-900 dark:[&>strong]:text-pink-100"
+  >
+    Currently a <strong>Software Developer Intern at Infinite Analytics</strong>,
+    building data pipelines on PySpark and FastAPI. I build full-stack web and
+    mobile apps, scalable REST APIs, and <strong>GenAI systems</strong> with RAG,
+    LLM APIs, and vector databases. Based in {PROFILE.location}.
+  </p>
+
+  <nav class="flex flex-wrap gap-3 mt-8">
+    <SocialPill href={PROFILE.resume} variant="primary">
+      <ResumeIcon />
       Resume
     </SocialPill>
+    <SocialPill href={SOCIALS.linkedin}>
+      <LinkedInIcon />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href={SOCIALS.github}>
+      <GitHubIcon />
+      GitHub
+    </SocialPill>
+    <SocialPill href={SOCIALS.leetcode}>LeetCode</SocialPill>
+    <SocialPill href={`mailto:${PROFILE.email}`}>
+      <MailIcon />
+      Email
+    </SocialPill>
   </nav>
+
+  <dl class="grid grid-cols-2 gap-3 mt-12 sm:grid-cols-4">
+    {
+      STATS.map((stat) => (
+        <div class="px-4 py-4 card card-hover">
+          <dt class="sr-only">{stat.label}</dt>
+          <dd class="text-3xl font-bold text-gradient">{stat.value}</dd>
+          <dd class="mt-1 text-xs text-gray-600 dark:text-gray-400">
+            {stat.label}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
 </div>

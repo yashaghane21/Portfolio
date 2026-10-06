@@ -1,40 +1,32 @@
 ---
-const personalImageAlt = "Yash Aghane";
+import { PROFILE } from "./DATA";
 ---
 
 <article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  class="p-6 sm:p-8 card text-gray-700 dark:text-gray-300 text-pretty leading-relaxed [&>p]:mb-4 [&>p:last-child]:mb-0 [&_strong]:font-semibold [&_strong]:text-gray-900 dark:[&_strong]:text-pink-200"
 >
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1 text-justify"
-  >
-    <p>
-      My name is <strong>Yash Aghane</strong>, a passionate and self-driven
-      <strong>Third-year B.E. Computer Science student</strong> at Thakur College of Engineering and Technology, Mumbai. 
-      I come from a humble background and am determined to make my family and village proud by securing a top placement in the tech industry.
-    </p>
-    <p>
-      I have hands-on experience through a <strong>Software Developer Internship at Medisage</strong>, 
-      where I worked on <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Laravel</strong>, and built scalable full-stack solutions. 
-      I've developed real-world products like an E-commerce platform and a feedback portal, and I'm currently contributing to a startup project, <strong>Gigzi</strong>.
-    </p>
-    <p>
-      I'm also consistently sharpening my problem-solving abilities and have committed to solving 
-      <strong>daily DSA problems</strong> with the goal of securing an internship in my third year. 
-      I participate in <strong>hackathons</strong> and open-source initiatives like <strong>GSoC</strong> to challenge myself further and build impactful software.
-    </p>
-    <p>
-      My journey is fueled by the motivation to prove that dedication and consistent effort can beat the odds. 
-      I'm always ready to collaborate, learn, and grow.
-    </p>
-  </div>
-
-  <!-- <img
-    width="200"
-    height="200"
-    src="/yash.jpg"
-    alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-    style="object-position: 50% 50%"
-  /> -->
+  <p>
+    I'm <strong>{PROFILE.name}</strong>, a software engineer and final-year
+    <strong>B.E. Computer Science</strong> student at Thakur College of
+    Engineering and Technology, Mumbai, and before that I earned a Diploma in
+    Information Technology from Government Polytechnic Mumbai.
+  </p>
+  <p>
+    Over 1.5+ years across <strong>Medisage</strong>, <strong>Gigzi</strong>,
+    and now <strong>Infinite Analytics</strong>, I've shipped production
+    features end to end: a React Native booking app live on Google Play, a
+    RAG-powered discovery assistant, REST APIs that brought latency down from
+    1.2s to 400ms, and PySpark data pipelines that replaced hours of manual
+    work.
+  </p>
+  <p>
+    I enjoy backend and data-heavy problems, and I'm currently going deeper into
+    <strong>GenAI systems</strong>: retrieval, embeddings, and AI agents. I keep
+    my fundamentals sharp with regular DSA practice and love hackathons. My team
+    won <strong>Technathon 2024</strong> out of 800+ teams.
+  </p>
+  <p>
+    I come from a humble background, and I believe consistent effort beats the
+    odds. Always happy to collaborate, learn, and build things that matter.
+  </p>
 </article>

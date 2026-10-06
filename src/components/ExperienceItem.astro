@@ -2,46 +2,75 @@
 interface Props {
   title: string;
   company: string;
+  location: string;
   type: string;
-  link?: string;
   date: string;
+  stack: string[];
+  links: { label: string; url: string }[];
   description: string[];
 }
 
-const { title, company, date, type, description } = Astro.props;
+const { title, company, location, date, type, stack, links, description } =
+  Astro.props;
 ---
 
-<div
-  class="relative ml-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
->
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
-        >&bull;</span
-      >
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
-        {company}
-      </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+<div class="relative pb-12 pl-8 sm:pl-10 group">
+  <!-- timeline line + dot -->
+  <span
+    class="absolute left-[5px] top-2 bottom-0 w-px bg-gradient-to-b from-pink-500/60 via-pink-500/20 to-transparent"
+  ></span>
+  <span
+    class="absolute left-0 top-1.5 size-[11px] rounded-full bg-pink-500 ring-4 ring-pink-500/20 shadow-[0_0_14px_rgba(236,72,153,0.9)]"
+  ></span>
+
+  <div class="p-5 card card-hover sm:p-6">
+    <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-start">
+      <div>
+        <h3 class="text-lg font-bold text-gray-900 sm:text-xl dark:text-white">
+          {title}
+          <span class="text-pink-600 dark:text-pink-400">@ {company}</span>
+        </h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          {location}{type && ` · ${type}`}
+        </p>
+      </div>
+      <time
+        class="font-mono text-xs text-gray-500 sm:text-sm sm:pt-1 shrink-0 dark:text-gray-400"
         >{date}</time
       >
-      <div class="pt-1 m-0">
-        {type}
-      </div>
     </div>
-  </div>
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
-  >
-    <ul class="list-none sm:pl-0 pl-0 md:text-justify">
+
+    {
+      links.length > 0 && (
+        <div class="flex flex-wrap gap-3 mt-2 text-sm">
+          {links.map((l) => (
+            <a
+              href={l.url}
+              target="_blank"
+              rel="noopener"
+              class="text-pink-600 underline decoration-pink-500/40 underline-offset-4 hover:decoration-pink-500 dark:text-pink-300"
+            >
+              {l.label} ↗
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    <ul
+      class="mt-4 text-gray-700 dark:text-gray-300 [&_strong]:font-semibold [&_strong]:text-gray-900 dark:[&_strong]:text-pink-100"
+    >
       {
         description.map((item) => (
-          <li class="relative pl-6 pb-2 before:content-['▹'] before:absolute before:left-0">
-            {item}
-          </li>
+          <li
+            class="relative pb-2 pl-5 before:content-['▹'] before:absolute before:left-0 before:text-pink-500"
+            set:html={item}
+          />
         ))
       }
+    </ul>
+    <ul class="flex flex-wrap gap-2 mt-3">
+      {stack.map((s) => <li class="chip">{s}</li>)}
     </ul>
   </div>
 </div>

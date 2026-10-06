@@ -2,20 +2,18 @@
 import { SKILLSET } from "./DATA";
 ---
 
-<div class="flex flex-col gap-6">
+<div class="grid gap-4 sm:grid-cols-2">
   {
-    SKILLSET.map((skillSet) => (
-      <div class="p-4 flex flex-col justify-start items-center">
-        <h3 class="text-xl font-bold text-gray-300">{skillSet.name}</h3>
-        <ul class="flex flex-wrap mt-6 gap-8 items-center justify-center">
+    SKILLSET.map((skillSet, i) => (
+      <div class:list={["p-5 card card-hover", i === 0 && "sm:col-span-2"]}>
+        <h3 class="font-mono text-xs tracking-widest text-pink-600 uppercase dark:text-pink-400">
+          {skillSet.name}
+        </h3>
+        <ul class="flex flex-wrap gap-2 mt-4">
           {skillSet.skills.map((skill) => (
-            <li>
-              <span
-                class={`flex flex-col gap-2 text-sm justify-center items-center`}
-              >
-                <skill.icon class="size-11" />
-                {skill.name}
-              </span>
+            <li class="flex items-center gap-1.5 px-3 py-1 text-sm text-gray-800 transition border rounded-full border-black/10 bg-white/60 hover:border-pink-500/60 hover:text-pink-600 dark:text-gray-200 dark:bg-white/5 dark:border-white/10 dark:hover:text-pink-200 dark:hover:border-pink-400/50 [&_svg]:size-4">
+              {skill.icon && <skill.icon />}
+              {skill.name}
             </li>
           ))}
         </ul>

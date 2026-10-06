@@ -1,0 +1,49 @@
+---
+import { EDUCATION, ACHIEVEMENTS } from "./DATA";
+---
+
+<div class="grid gap-4 sm:grid-cols-2">
+  {
+    EDUCATION.map((e) => (
+      <div class="relative p-6 overflow-hidden card card-hover">
+        <div class="absolute rounded-full -top-10 -right-10 size-32 bg-pink-500/10 blur-2xl" />
+        <time class="font-mono text-xs text-gray-500 dark:text-gray-400">
+          {e.date}
+        </time>
+        <h3 class="mt-2 font-semibold text-gray-900 dark:text-white">
+          {e.school}
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{e.degree}</p>
+        <p class="mt-4 text-2xl font-bold text-gradient">{e.score}</p>
+      </div>
+    ))
+  }
+</div>
+
+<h3
+  class="mt-12 mb-4 font-mono text-sm tracking-widest text-gray-500 uppercase dark:text-gray-400"
+>
+  Achievements
+</h3>
+<ul class="flex flex-col gap-3">
+  {
+    ACHIEVEMENTS.map((a) => (
+      <li class="flex items-start gap-4 p-5 card card-hover">
+        <span class="flex items-center justify-center text-lg rounded-full size-10 shrink-0 bg-pink-500/10 ring-1 ring-pink-500/30">
+          🏆
+        </span>
+        <div class="flex flex-col justify-between flex-1 gap-1 sm:flex-row sm:items-center">
+          <div>
+            <strong class="font-semibold text-gray-900 dark:text-white">
+              {a.title}
+            </strong>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{a.detail}</p>
+          </div>
+          <time class="font-mono text-xs text-gray-500 shrink-0 dark:text-gray-400">
+            {a.date}
+          </time>
+        </div>
+      </li>
+    ))
+  }
+</ul>

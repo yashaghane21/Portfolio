@@ -1,61 +1,50 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import Briefcase from "@/components/icons/Briefcase.astro";
-import CodeIcon from "@/components/icons/Code.astro";
-import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import SectionContainer from "@/components/util/SectionContainer.astro";
+import SectionHeading from "@/components/util/SectionHeading.astro";
 import Hero from "@/components/Hero.astro";
 import Experience from "@/components/Experience.astro";
 import Projects from "@/components/Projects.astro";
 import Skills from "@/components/Skills.astro";
+import Education from "@/components/Education.astro";
 import AboutMe from "@/components/AboutMe.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
-<Layout title="Yash Aghane">
+<Layout title="Yash Aghane | Software Engineer">
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="pt-32 pb-20 md:pt-44 md:pb-28">
       <Hero />
     </SectionContainer>
-    <div class="space-y-24">
-      <SectionContainer id="experience">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <Briefcase class="size-8" />
-          Work Experience
-        </h2>
+    <div class="space-y-28">
+      <SectionContainer id="experience" class="reveal">
+        <SectionHeading index={1} title="Work Experience" />
         <Experience />
       </SectionContainer>
 
-      <SectionContainer id="projects">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <CodeIcon class="size-8" />
-          Projects
-        </h2>
+      <SectionContainer id="projects" class="reveal">
+        <SectionHeading index={2} title="Featured Projects" />
         <Projects />
       </SectionContainer>
 
-      <SectionContainer id="skills">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <CodeIcon class="size-8" />
-          Skills
-        </h2>
+      <SectionContainer id="skills" class="reveal">
+        <SectionHeading index={3} title="Skills" />
         <Skills />
       </SectionContainer>
 
-      <SectionContainer id="about-me">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <ProfileCheck class="size-8" />
-          About Me
-        </h2>
+      <SectionContainer id="education" class="reveal">
+        <SectionHeading index={4} title="Education & Achievements" />
+        <Education />
+      </SectionContainer>
+
+      <SectionContainer id="about-me" class="reveal">
+        <SectionHeading index={5} title="About Me" />
         <AboutMe />
+      </SectionContainer>
+
+      <SectionContainer id="contact" class="reveal">
+        <Contact />
       </SectionContainer>
     </div>
   </main>

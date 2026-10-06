@@ -4,16 +4,16 @@ import { NAVITEMS } from "./DATA";
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full px-2 mx-auto mt-3"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex items-center justify-center px-2 text-xs font-medium text-gray-600 border border-transparent rounded-full sm:px-3 sm:text-sm dark:text-gray-300"
   >
     {
       NAVITEMS.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-          aria-label={link.label}
+          class="relative block px-1.5 py-2 transition sm:px-2.5 hover:text-pink-500 dark:hover:text-pink-400"
+          data-nav={link.label}
           href={link.url}
         >
           {link.title}
@@ -26,43 +26,25 @@ import { NAVITEMS } from "./DATA";
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll<HTMLElement>("header nav a");
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500");
-            } else {
-              item.classList.remove("text-yellow-500");
-            }
+            item.classList.toggle(
+              "!text-pink-500",
+              item.dataset.nav === entry.target.id
+            );
           });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
         });
-      }
-    };
+      },
+      { root: null, rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
   });
 </script>
 
@@ -73,9 +55,25 @@ import { NAVITEMS } from "./DATA";
     animation-range: 0 100px;
   }
 
+  :global(.dark) nav {
+    animation-name: nav-shadow-dark;
+  }
+
   @keyframes nav-shadow {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      background-color: rgb(255 255 255 / 0.75);
+      backdrop-filter: blur(12px);
+      border-color: rgb(236 72 153 / 0.2);
+      box-shadow: 0 10px 30px -10px rgb(236 72 153 / 0.25);
+    }
+  }
+
+  @keyframes nav-shadow-dark {
+    to {
+      background-color: rgb(0 0 0 / 0.7);
+      backdrop-filter: blur(12px);
+      border-color: rgb(236 72 153 / 0.25);
+      box-shadow: 0 10px 40px -10px rgb(236 72 153 / 0.35);
     }
   }
 </style>

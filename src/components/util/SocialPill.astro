@@ -1,9 +1,28 @@
+---
+interface Props {
+  href: string;
+  variant?: "primary" | "outline";
+}
+
+const { href, variant = "outline" } = Astro.props;
+const external = !href.startsWith("mailto:");
+
+const variants = {
+  primary:
+    "bg-pink-600 text-white border-pink-500 shadow-[0_0_24px_-6px_rgba(236,72,153,0.8)] hover:bg-pink-500 hover:shadow-[0_0_32px_-4px_rgba(236,72,153,0.9)]",
+  outline:
+    "bg-white/70 text-gray-800 border-black/10 hover:border-pink-500/60 hover:text-pink-600 dark:bg-white/5 dark:text-white dark:border-white/15 dark:hover:text-pink-300 dark:hover:border-pink-400/60",
+};
+---
+
 <a
-  {...Astro.props}
-  target="_blank"
-  rel="noopener noreferrer"
-  role="link"
-  class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+  href={href}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  class:list={[
+    "inline-flex items-center justify-center gap-2 px-4 py-1.5 text-sm font-medium border rounded-full transition duration-300 max-w-fit backdrop-blur focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black [&_svg]:size-4",
+    variants[variant],
+  ]}
 >
   <slot />
 </a>

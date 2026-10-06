@@ -1,397 +1,279 @@
 import NextJS from "./icons/technical/NextJS.astro";
 import NodeJS from "./icons/technical/NodeJS.astro";
 import ExpressJS from "./icons/technical/ExpressJS.astro";
-import Typescript from "./icons/technical/Typescript.astro";
 import MongoDB from "./icons/technical/MongoDB.astro";
 import Redis from "./icons/technical/Redis.astro";
-import Solidity from "./icons/technical/Solidity.astro";
-import Devops from "./icons/technical/Devops.astro";
-import Blockchain from "./icons/technical/Blockchain.astro";
-import Solana from "./icons/technical/Solana.astro";
-import Kubernetes from "./icons/technical/Kubernetes.astro";
-import AstroIcon from "./icons/technical/AstroIcon.astro";
 import Tailwind from "./icons/technical/Tailwind.astro";
 import ReactJS from "./icons/technical/ReactJS.astro";
-import Firebase from "./icons/technical/Firebase.astro";
-import Bootstrap from "./icons/technical/Bootstrap.astro";
-import Sass from "./icons/technical/Sass.astro";
 import Javascript from "./icons/technical/Javascript.astro";
 import Java from "./icons/technical/Java.astro";
 import Python from "./icons/technical/Python.astro";
-import OCI from "./icons/technical/OCI.astro";
-import Oracle from "./icons/technical/Oracle.astro";
-import Shell from "./icons/technical/Shell.astro";
 import SQL from "./icons/technical/SQL.astro";
-import CPP from "./icons/technical/CPP.astro";
-import WebRTC from "./icons/technical/WebRTC.astro";
+import Shell from "./icons/technical/Shell.astro";
 import Git from "./icons/tools/Git.astro";
 import Postman from "./icons/tools/Postman.astro";
-import Docker from "./icons/tools/Docker.astro";
 import GitHubColor from "./icons/tools/GitHubColor.astro";
-import GitLab from "./icons/tools/GitLab.astro";
-import Vercel from "./icons/tools/Vercel.astro";
-import VSCode from "./icons/tools/VSCode.astro";
-import MacOS from "./icons/tools/macOS.astro";
-import Rollup from "./icons/tools/Rollup.astro";
 
-const PROJECTTAGS = {
-  NODE: {
-    name: "Node.js",
-    class: "bg-[#222222] text-white",
-    icon: NodeJS,
-  },
-  EXPRESS: {
-    name: "Express.js",
-    class: "bg-[#323232] text-white",
-    icon: ExpressJS,
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    class: "bg-[#3178c661] text-white",
-    icon: Typescript,
-  },
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  REACT: {
-    name: "React",
-    class: "bg-[#23272f] text-white",
-    icon: ReactJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    class: "bg-[#3f2c42] text-white",
-    icon: Bootstrap,
-  },
-  SASS: {
-    name: "SASS",
-    class: "bg-[#6b717f] text-white",
-    icon: Sass,
-  },
-  MONGODB: {
-    name: "MongoDB",
-    class: "bg-[#001e2b] text-white",
-    icon: MongoDB,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    class: "bg-[#5e5e5e] text-white",
-    icon: Firebase,
-  },
-  REDIS: {
-    name: "Redis",
-    class: "bg-[#636466] text-white",
-    icon: Redis,
-  },
-  ROLLUP: {
-    name: "Rollup",
-    class: "bg-[#a6432c6e] text-white",
-    icon: Rollup,
-  },
+const PROFILE = {
+  name: "Yash Aghane",
+  role: "Software Engineer · Full-Stack & Backend Developer",
+  location: "Mumbai, India",
+  email: "yashaghane1141121@gmail.com",
+  resume: "/Yash_Aghane_Resume.pdf",
+  summary:
+    "Software Engineer and Computer Science undergraduate with 1.5+ years of industry experience across three companies, building full-stack web and mobile applications, scalable REST APIs, and data pipelines. Experienced in GenAI systems with Retrieval-Augmented Generation (RAG), LLM APIs, and vector databases.",
 };
 
-const SKILLS = {
-  JAVA: {
-    name: "Java",
-    icon: Java,
-  },
-  PYTHON: {
-    name: "Python",
-    icon: Python,
-  },
-  JAVASCRIPT: {
-    name: "JavaScript",
-    icon: Javascript,
-  },
-  CPP: {
-    name: "C++",
-    icon: CPP,
-  },
-  SQL: {
-    name: "SQL",
-    icon: SQL,
-  },
-  REACT: {
-    name: "React",
-    icon: ReactJS,
-  },
-  NEXT: {
-    name: "Next.js",
-    icon: NextJS,
-  },
-
-  NODE: {
-    name: "Node.js",
-    icon: NodeJS,
-  },
-  EXPRESS: {
-    name: "Express.js",
-    icon: ExpressJS,
-  },
-  SHELL: {
-    name: "Shell",
-    icon: Shell,
-  },
-  MONGODB: {
-    name: "MongoDB",
-    icon: MongoDB,
-  },
-  REDIS: {
-    name: "Redis",
-    icon: Redis,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    icon: Firebase,
-  },
-  ASTRO: {
-    name: "Astro",
-    icon: AstroIcon,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    icon: Tailwind,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    icon: Bootstrap,
-  },
-  SASS: {
-    name: "SASS",
-    icon: Sass,
-  },
-
-  GIT: {
-    name: "Git",
-    icon: Git,
-  },
-  POSTMAN: {
-    name: "Postman",
-    icon: Postman,
-  },
-  DOCKER: {
-    name: "Docker",
-    icon: Docker,
-  },
-
-  GITHUB: {
-    name: "GitHub",
-    icon: GitHubColor,
-  },
-  GITLAB: {
-    name: "GitLab",
-    icon: GitLab,
-  },
-
-  VERCEL: {
-    name: "Vercel",
-    icon: Vercel,
-  },
-  MACOS: {
-    name: "macOS",
-    icon: MacOS,
-  },
-  VSCODE: {
-    name: "VSCode",
-    icon: VSCode,
-  },
-  DEVOPS: {
-    name: "DevOps",
-    icon: Devops,
-  },
-  KUBERNETES: {
-    name: "Kubernetes",
-    icon: Kubernetes,
-  },
-  WEBRTC: {
-    name: "WebRTC",
-    icon: WebRTC,
-  },
-  REACTNATIVE: {
-    name: "React Native",
-    icon: ReactJS,
-  },
+const SOCIALS = {
+  linkedin: "https://www.linkedin.com/in/yashaghane21/",
+  github: "https://github.com/yashaghane21",
+  leetcode: "https://leetcode.com/u/yash1141121/",
 };
+
+const STATS = [
+  { value: "1.5+", label: "Years of experience" },
+  { value: "3", label: "Companies" },
+  { value: "8.51", label: "B.E. CGPA" },
+  { value: "#1", label: "Technathon 2024, 800+ teams" },
+];
 
 const NAVITEMS = [
-  {
-    title: "Experience",
-    label: "experience",
-    url: "/#experience",
-  },
-  {
-    title: "Projects",
-    label: "projects",
-    url: "/#projects",
-  },
-  {
-    title: "Skills",
-    label: "skills",
-    url: "/#skills",
-  },
-  {
-    title: "About Me",
-    label: "about-me",
-    url: "/#about-me",
-  },
-  // {
-  //   title: "Contact",
-  //   label: "contact",
-  //   url: "mailto:patelyashodhar012@gmail.com",
-  // },
+  { title: "Experience", label: "experience", url: "/#experience" },
+  { title: "Projects", label: "projects", url: "/#projects" },
+  { title: "Skills", label: "skills", url: "/#skills" },
+  { title: "Education", label: "education", url: "/#education" },
+  { title: "About", label: "about-me", url: "/#about-me" },
 ];
 
 const EXPERIENCE = [
   {
-    date: "June 2025 - Present",
-    title: " SDE",
-    company: "Gigzi",
-    type: "",
+    date: "Aug 2026 – Present",
+    title: "Software Developer Intern",
+    company: "Infinite Analytics",
+    location: "Mumbai",
+    type: "Internship",
+    stack: ["Python", "FastAPI", "PySpark", "React.js", "Jenkins", "Git"],
+    links: [],
     description: [
-      "Designed and developed a cross-platform artist booking platform with scalable architecture for multi-city deployment",
-      "Implemented secure login, artist onboarding, booking workflows, and role-based admin panels with Secure payouts.",
-      "Leading a 4-member team; managing Git workflows, API design, and agile delivery for scalable MVP release.",
-      "Coordinating backend deployment on Vercel and application release on the Google Play Store.",
+      "Automated manual data ingestion for audience reports into an end-to-end <strong>data pipeline</strong> powering a monitoring dashboard, eliminating <strong>4–5 hours</strong> of manual effort per reporting cycle.",
+      "Shipped features and resolved production bugs in the <strong>Customer Data Platform (CDP)</strong> pipeline using PySpark and Python, improving reliability of large-scale data processing jobs.",
+      "Developed React.js dashboards on FastAPI REST services, with <strong>Jenkins CI/CD</strong> pipelines for automated deployment.",
     ],
   },
   {
-    date: "January 2024 - July 2025",
-    title: "Software Developer Intern",
-    company: "MediSage",
-    type: "Internship",
+    date: "Aug 2025 – Jun 2026",
+    title: "Software Developer",
+    company: "Gigzi",
+    location: "Mumbai",
+    type: "Part-time",
+    stack: [
+      "React Native",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis",
+      "Pinecone",
+      "RAG",
+    ],
+    links: [
+      { label: "gigzi.in", url: "https://www.gigzi.in" },
+      {
+        label: "Play Store",
+        url: "https://play.google.com/store/apps/details?id=com.yash2121.gigzi&hl=en_IN",
+      },
+    ],
     description: [
-      "Reduced 60% of manual effort by implementing automation scripts for Database Entries.",
-      "Developed and implemented an API for administration dashboards, streamlining backend processes and enhancing system efficiency",
-      "Converted UI designs into functional React Js and Next.js code, resulting in responsive and high-performance user interfaces",
+      "Launched a cross-platform artist booking app (<strong>live on Google Play</strong>) using React Native, Node.js, Express.js, and MongoDB, covering artist discovery, search, authentication, and booking.",
+      "Engineered a <strong>GenAI artist discovery assistant</strong> using RAG with Gemini API, Pinecone vector search, and Redis caching.",
+      "Created reusable frontend components and contributed to REST API design, code reviews, and Git workflows.",
+    ],
+  },
+  {
+    date: "Jan 2024 – Jul 2024",
+    title: "Software Developer Intern",
+    company: "Medisage",
+    location: "Mumbai",
+    type: "Internship",
+    stack: ["React.js", "Next.js", "Node.js", "Laravel", "Tailwind CSS", "SQL", "MongoDB"],
+    links: [],
+    description: [
+      "Built responsive web features and reusable UI components in React.js, Next.js, and Tailwind CSS.",
+      "Automated Excel-to-SQL data ingestion, cutting manual data entry by <strong>60%</strong> and saving <strong>5+ hours weekly</strong>.",
+      "Designed REST APIs that improved cross-module data sync by <strong>30%</strong> and reduced API latency from <strong>1.2s to 400ms</strong>.",
     ],
   },
 ];
 
 const PROJECTS = [
   {
+    title: "Knowly AI",
+    subtitle: "Multi-Tenant RAG Knowledge Platform",
+    description: [
+      "Architected a <strong>multi-tenant</strong> platform with JWT authentication, user-level data isolation, and RAG-based querying.",
+      "Built a document-processing pipeline with overlap-based chunking and <strong>384-dimensional</strong> Sentence Transformer embeddings, indexed in MongoDB Atlas Vector Search.",
+      "Generates grounded Gemini LLM responses with <strong>source citations</strong> on a repository-service architecture.",
+    ],
+    github: "https://github.com/yashaghane21/Knowly_AI-Backend",
+    link: "",
+    image: "",
+    tags: ["Python", "FastAPI", "MongoDB", "Gemini API", "RAG"],
+  },
+  {
+    title: "Nucleus",
+    subtitle: "Project Management System",
+    description: [
+      "Plane.so-inspired platform with a hierarchical <strong>Workspaces → Projects → Tasks</strong> structure, task assignment, status tracking, and role-based access control.",
+      "Spring Boot REST APIs on <strong>PostgreSQL (AWS RDS)</strong> with <strong>AWS S3</strong> for profile media, DTO-based API design, and centralized exception handling.",
+    ],
+    github: "https://github.com/yashaghane21/Nucleus",
+    link: "",
+    image: "",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "AWS RDS", "AWS S3"],
+  },
+  {
     title: "Inaya",
-    subtitle: "Fashion Commerce Platform",
-    description:
-      "Developed a fully responsive e-commerce platform featuring user authentication, shopping cart, and real-time IP-based delivery charges.\n\n" +
-      "Built an admin panel managing 15+ modules including shipping configurations, coupon systems, and user operations.\n\n" +
-      "Implemented an analytics dashboard tracking 20+ key metrics, improving order processing efficiency by 40%.\n\n" +
-      "Delivered the project as a freelancer, handling full-stack development and client communication independently.",
-    detail: "",
+    subtitle: "Fashion E-Commerce Platform",
+    description: [
+      "Streamlined e-commerce workflows (authentication, cart, IP-based delivery logic) for <strong>20% faster</strong> order processing.",
+      "Delivered an admin UI with <strong>15+ modules</strong> and a dashboard tracking <strong>20+ metrics</strong>, raising efficiency by 40%.",
+    ],
     github: "",
     link: "https://inayapoeticthreads.com/",
     image: "/projects/inaya.png",
-    tags: [
-      PROJECTTAGS.REACT,
-      PROJECTTAGS.NODE,
-      PROJECTTAGS.MONGODB,
-      PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.TAILWIND,
-      // Since Inaya is fashion commerce, these blockchain tags might not fit unless the project uses them
-      // Remove Solidity, Ethereum, MetaMask, Web3.js, Thirdweb if irrelevant
-    ],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
   },
+];
 
+const OTHER_PROJECTS = [
   {
     title: "PolyConnectHub",
-    subtitle: "Polytechnic Project Collaboration Platform",
-    description:
-      "Developed a Super Admin Portal to streamline management and coordination across multiple polytechnic colleges, enabling centralized control and oversight.\n\n" +
-      "Implemented individual college accounts for Heads of Departments (HoDs) to showcase, manage, and update project information efficiently.\n\n" +
-      "Built a responsive, user-friendly student interface to access a comprehensive repository of projects, fostering collaboration, innovation, and reducing redundancy.\n\n" +
-      "Leveraged React and Tailwind CSS for seamless UI/UX, Node.js and Express for scalable backend APIs, and MongoDB for robust data storage.",
-    detail: "",
+    subtitle: "Project collaboration platform for polytechnic colleges",
     github: "https://github.com/yashaghane21/PolyConnectHub",
     link: "https://polyconnect-hub.netlify.app/",
-    image: "/projects/ss.png",
-    tags: [
-      PROJECTTAGS.NODE,
-      PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.REACT,
-      PROJECTTAGS.TAILWIND,
-      PROJECTTAGS.MONGODB,
-    ],
-  },  {
+    tags: ["React", "Node.js", "MongoDB"],
+  },
+  {
     title: "FeedBacker",
-    subtitle: "Course Feedback System",
-    description:
-      "Developed a scalable feedback management system enabling students to securely submit course and experience feedback, ensuring data integrity and anonymity.\n\n" +
-      "Engineered a dynamic analytics dashboard for Heads of Departments (HoDs) and Principal using React and MongoDB aggregation pipelines to provide real-time statistical insights and trend analysis.\n\n" +
-      "Implemented role-based access control (RBAC) and optimized API endpoints with Express.js for efficient, secure data retrieval and administration.\n\n" +
-      "Applied responsive UI design with Tailwind CSS to ensure seamless user experience across devices.",
-    detail: "",
-    github: "https://github.com/stars/yashaghane21/lists/feedbacker",
+    subtitle: "Course feedback system with analytics dashboards",
+    github: "https://github.com/yashaghane21/Feedbacker_Frontend",
     link: "https://gpmfeedback.netlify.app/",
-    image: "/projects/feedbacker.png",
-    tags: [
-      PROJECTTAGS.NODE,
-      PROJECTTAGS.EXPRESS,
-      PROJECTTAGS.REACT,
-      PROJECTTAGS.TAILWIND,
-      PROJECTTAGS.MONGODB,
+    tags: ["React", "Express.js", "MongoDB"],
+  },
+];
+
+// `icon` is optional — skills without a bundled icon render as text pills.
+type Skill = { name: string; icon?: any };
+
+const SKILLSET: { name: string; skills: Skill[] }[] = [
+  {
+    name: "Languages & Frontend",
+    skills: [
+      { name: "Java", icon: Java },
+      { name: "Python", icon: Python },
+      { name: "JavaScript", icon: Javascript },
+      { name: "SQL", icon: SQL },
+      { name: "C" },
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "React.js", icon: ReactJS },
+      { name: "React Native", icon: ReactJS },
+      { name: "Next.js", icon: NextJS },
+      { name: "Tailwind CSS", icon: Tailwind },
+    ],
+  },
+  {
+    name: "Backend & Cloud",
+    skills: [
+      { name: "Node.js", icon: NodeJS },
+      { name: "Express.js", icon: ExpressJS },
+      { name: "Spring Boot" },
+      { name: "FastAPI" },
+      { name: "Laravel" },
+      { name: "REST APIs" },
+      { name: "JWT" },
+      { name: "AWS (RDS, S3)" },
+    ],
+  },
+  {
+    name: "Databases",
+    skills: [
+      { name: "MongoDB", icon: MongoDB },
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "Redis", icon: Redis },
+      { name: "Pinecone" },
+      { name: "Atlas Vector Search" },
+    ],
+  },
+  {
+    name: "Data & GenAI",
+    skills: [
+      { name: "Apache Spark (PySpark)" },
+      { name: "Data Pipelines" },
+      { name: "RAG" },
+      { name: "LLM APIs (Gemini)" },
+      { name: "Vector Embeddings" },
+      { name: "AI Agents" },
+    ],
+  },
+  {
+    name: "Tools & Fundamentals",
+    skills: [
+      { name: "Git", icon: Git },
+      { name: "GitHub", icon: GitHubColor },
+      { name: "Jenkins" },
+      { name: "CI/CD" },
+      { name: "Postman", icon: Postman },
+      { name: "Linux", icon: Shell },
+      { name: "DSA" },
+      { name: "OOP" },
+      { name: "DBMS" },
+      { name: "OS" },
+      { name: "Networks" },
     ],
   },
 ];
 
-const SKILLSET = [
+const EDUCATION = [
   {
-    name: "Programming Languages",
-    skills: [
-      SKILLS.JAVA,
-      SKILLS.PYTHON,
-      SKILLS.JAVASCRIPT,
-      SKILLS.CPP,
-      SKILLS.SQL,
-    ],
+    school: "Thakur College of Engineering and Technology",
+    location: "Mumbai",
+    degree: "B.E. in Computer Science and Engineering",
+    date: "Sep 2024 – Jul 2027",
+    score: "CGPA 8.51 / 10",
   },
   {
-    name: "Technical",
-    skills: [
-      SKILLS.REACT,
-      SKILLS.NEXT,
-      SKILLS.NODE,
-      SKILLS.EXPRESS,
-      SKILLS.SHELL,
-      SKILLS.MONGODB,
-      SKILLS.REDIS,
-      SKILLS.REACTNATIVE,
-      SKILLS.FIREBASE,
-      SKILLS.ASTRO,
-      SKILLS.TAILWIND,
-      SKILLS.SASS,
-      // SKILLS.BOOTSTRAP
-    ],
+    school: "Government Polytechnic Mumbai",
+    location: "Mumbai",
+    degree: "Diploma in Information Technology",
+    date: "Sep 2021 – Jul 2024",
+    score: "91.33%",
   },
-  {
-    name: "Tools",
-    skills: [
-      SKILLS.POSTMAN,
-      SKILLS.DOCKER,
-      SKILLS.GIT,
-      SKILLS.GITHUB,
-      SKILLS.GITLAB,
-      SKILLS.VERCEL,
-      SKILLS.MACOS,
-      // SKILLS.VSCODE,
-    ],
-  },
-  // {
-  //   name: "Currently Learning",
-  //   skills: [
-  //     SKILLS.SOLIDITY,
-  //     SKILLS.BLOCKCHAIN,
-  //     SKILLS.SOLANA,
-  //     SKILLS.DEVOPS,
-  //     SKILLS.KUBERNETES,
-  //     // SKILLS.WEBRTC,
-  //   ],
-  // },
 ];
 
-export { NAVITEMS, EXPERIENCE, PROJECTS, SKILLSET };
+const ACHIEVEMENTS = [
+  {
+    title: "Winner, Technathon 2024",
+    detail: "1st place out of 800+ teams in a 24-hour hackathon.",
+    date: "Feb 2024",
+  },
+  {
+    title: "Extra Mile Award, Medisage",
+    detail: "Recognized for ownership of additional project goals.",
+    date: "Jun 2024",
+  },
+];
+
+export {
+  PROFILE,
+  SOCIALS,
+  STATS,
+  NAVITEMS,
+  EXPERIENCE,
+  PROJECTS,
+  OTHER_PROJECTS,
+  SKILLSET,
+  EDUCATION,
+  ACHIEVEMENTS,
+};

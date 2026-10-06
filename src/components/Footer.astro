@@ -1,38 +1,42 @@
 ---
+import { PROFILE, SOCIALS } from "./DATA";
+
 const currentYear = new Date().getFullYear();
+const links = [
+  { label: "Resume", href: PROFILE.resume },
+  { label: "GitHub", href: SOCIALS.github },
+  { label: "LinkedIn", href: SOCIALS.linkedin },
+  { label: "LeetCode", href: SOCIALS.leetcode },
+  { label: "Contact", href: `mailto:${PROFILE.email}` },
+];
 ---
 
 <footer
-  class="opacity-80 m-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
+  class="container w-full px-4 mx-auto mt-24 mb-10 opacity-90 lg:max-w-4xl md:max-w-2xl"
 >
   <div
-    class="rounded-lg w-full max-w-screen-xl mx-auto flex items-center justify-between p-4 md:px-0"
+    class="flex flex-col items-center justify-between gap-4 pt-6 border-t sm:flex-row border-pink-500/20"
   >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-      <a
-        href="https://www.linkedin.com/in/yash-aghane-052382215/"
-        class="hover:underline"
-        target="_blank">yashaghane</a
-      >
+    <span class="text-sm text-zinc-700 dark:text-zinc-300">
+      © {currentYear} {PROFILE.name}
     </span>
     <ul
-      class="flex flex-wrap items-center text-sm font-medium dark:text-white/90 sm:mt-0"
+      class="flex flex-wrap items-center justify-center text-sm font-medium gap-x-5 gap-y-2 text-zinc-700 dark:text-white/90"
     >
-      <li>
-        <a
-          target="_blank"
-          href="https://drive.google.com/file/d/1hgO1bX7ldccT8w8WhVY1cVhQwT4dAWp-/view?usp=drive_link"
-          class="hover:underline me-4 md:me-6">Resume</a
-        >
-      </li>
-      <li>
-        <a
-          id="contact"
-          href="mailto:yashaghane1141121@gmail.com"
-          class="hover:underline">Contact</a
-        >
-      </li>
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              target={l.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel="noopener"
+              class="hover:underline hover:text-pink-600 dark:hover:text-pink-300"
+            >
+              {l.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </footer>
